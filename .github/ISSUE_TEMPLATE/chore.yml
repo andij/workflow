@@ -1,0 +1,26 @@
+name: Chore
+description: Outome and scope
+title: "[chore] "
+labels: ["chore", "triage"]
+projects: "andij/1"
+body:
+  - type: markdown
+    attributes:
+      value: |
+      Thank you for raising a chore.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Provide a description of the expected outcome
+      placeholder: The moon to be placed on the end of a stick
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Provide a list of scope items
+      placeholder: The steps required to place the moon on a stick
+    validations:
+      required: true
