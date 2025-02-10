@@ -1,0 +1,25 @@
+name: Move to Prioritised
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  update_issue:
+    if: github.event.project_card.column_id == '8e96a9fa'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Remove 'triage' label
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: triage
+        issue_number: ${{ github.event.project_card.content_url | split: '/' | last }}
+
+    - name: Add 'available' label
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: available
+        issue_number: ${{ github.event.project_card.content_url | split: '/' | last }}
