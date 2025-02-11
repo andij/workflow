@@ -1,29 +1,35 @@
-name: Move to Prioritised
+name: Remove Triage Label on Project Move
 
 on:
   project_card:
-    types: [moved]
+    types:
+      - moved
 
 jobs:
-  update_issue:
-    if: github.event.project_card.column_id == '8e96a9fa'
+  remove-triage-label:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Extract issue number
-      id: extract_issue_number
-      run: echo "::set-output name=ISSUE_NUMBER::$(echo ${GITHUB_EVENT_PROJECT_CARD_CONTENT_URL##*/})"
+      - name: Get project column details
+        id: get-column
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /projects/columns/{column_id}
+          column_id: ${{ github.event.project_card.column_id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Remove 'triage' label
-      uses: actions-ecosystem/action-remove-labels@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        labels: triage
-        issue_number: ${{ steps.extract_issue_number.outputs.ISSUE_NUMBER }}
+      - name: Check if issue moved to prioritised column
+        id: check-column
+        run: |
+          COLUMN_NAME="${{ fromJson(steps.get-column.outputs.data).name }}"
+          echo "Column name: $COLUMN_NAME"
+          if [[ "$COLUMN_NAME" == "prioritised" ]]; then
+            echo "MOVE_ISSUE=true" >> $GITHUB_ENV
+          fi
 
-    - name: Add 'available' label
-      uses: actions-ecosystem/action-add-labels@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        labels: available
-        issue_number: ${{ steps.extract_issue_number.outputs.ISSUE_NUMBER }}
+      - name: Remove 'triage' label
+        if: env.MOVE_ISSUE == 'true'
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: triage
