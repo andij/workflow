@@ -1,35 +1,13 @@
-name: Remove Triage Label on Project Move
+name: Remove Label
 
-on:
-  project_card:
-    types:
-      - moved
+on: [issue_comment]
 
 jobs:
-  remove-triage-label:
+  remove_label:
     runs-on: ubuntu-latest
     steps:
-      - name: Get project column details
-        id: get-column
-        uses: octokit/request-action@v2.x
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-remove-labels@v1
+        if: ${{ startsWith(github.event.comment.body, '/remove-labels') }}
         with:
-          route: GET /projects/columns/{column_id}
-          column_id: ${{ github.event.project_card.column_id }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check if issue moved to prioritised column
-        id: check-column
-        run: |
-          COLUMN_NAME="${{ fromJson(steps.get-column.outputs.data).name }}"
-          echo "Column name: $COLUMN_NAME"
-          if [[ "$COLUMN_NAME" == "prioritised" ]]; then
-            echo "MOVE_ISSUE=true" >> $GITHUB_ENV
-          fi
-
-      - name: Remove 'triage' label
-        if: env.MOVE_ISSUE == 'true'
-        uses: actions-ecosystem/action-remove-labels@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: triage
