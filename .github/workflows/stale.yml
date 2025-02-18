@@ -1,0 +1,24 @@
+name: Mark Stale Issues
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark stale issues
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 2
+          days-before-close: -1 # Never close issues
+          stale-issue-label: stale
+          only-labels: rfc
+          exempt-issue-labels: icebox,stable,confirmed
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity."
+          operations-per-run: 30 # Limits number of issues processed per run
+          remove-stale-when-updated: true
+
