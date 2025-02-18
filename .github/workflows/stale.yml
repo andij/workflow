@@ -16,9 +16,8 @@ jobs:
           days-before-stale: 2
           days-before-close: -1 # Never close issues
           stale-issue-label: stale
-          only-labels: rfc
+          only-labels: chore
           exempt-issue-labels: icebox,stable,confirmed
           stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity."
           operations-per-run: 30 # Limits number of issues processed per run
           remove-stale-when-updated: true
-
