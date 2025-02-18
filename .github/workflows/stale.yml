@@ -2,8 +2,11 @@ name: Mark Stale Issues
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight
+    - cron: '0 0 * * *' # Runs daily at midnight GMT
   workflow_dispatch: # Allows manual trigger
+
+permissions:
+  issues: write # Grant write access to issues so the action can add labels and post comments
 
 jobs:
   stale:
@@ -12,7 +15,6 @@ jobs:
       - name: Mark stale issues
         uses: actions/stale@v9
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 2
           days-before-close: -1 # Never close issues
           stale-issue-label: stale
