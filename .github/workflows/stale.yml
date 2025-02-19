@@ -23,6 +23,6 @@ jobs:
           stale-issue-message: >
             This proposal has gone stale 🥺
             
-            After 14 days of inactivity, proposals are labelled stale. Update, comment or ask a question to keep it active.
+            After 14 days of inactivity, proposals are labelled `stale`. Update, comment or ask a question to keep it active.
           operations-per-run: 30 # Limits number of issues processed per run
           remove-stale-when-updated: true
