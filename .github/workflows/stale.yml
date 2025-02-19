@@ -20,6 +20,9 @@ jobs:
           stale-issue-label: stale
           only-labels: chore
           exempt-issue-labels: icebox,stable,confirmed
-          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity."
+          stale-issue-message: >
+            This proposal has gone stale 🥺
+            
+            After 14 days of inactivity, proposals are labelled stale. Update, comment or ask a question to keep it active.
           operations-per-run: 30 # Limits number of issues processed per run
           remove-stale-when-updated: true
