@@ -162,10 +162,8 @@ body:
     id: markdown_with_link_to_issue
     attributes:
       value: |
-        You can mention a bug with an explicit link. For example:
-        [test](https://github.com/Elliria/hello-world/issues/2)
-        This short version might also work, but I haven't tested it:
-        [test](Elliria/hello-world#2)
+        You can mention a bug with an explicit link.
+        - https://github.com/andij/workflow/issues/1
     validations:
       required: false
 
@@ -176,7 +174,7 @@ body:
       value: |
         You can mention a GitHub member with an at symbol followed by
         their name. For instance, to mention myself, I would use
-        @Elliria.
+        @andij.
     validations:
       required: false
 

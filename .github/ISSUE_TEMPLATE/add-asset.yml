@@ -1,0 +1,26 @@
+name: Add asset
+description: Add an icon or illustration
+title: "[asset] "
+labels: ["chore", "triage"]
+projects: "andij/1"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template aims to be well structured outlining the workflow and process to add an asset to the nucleus-util repository. And to help ensure that all tasks and dependencies are complete in a timely and informed way.
+  - type: textarea
+    id: asset
+    attributes:
+      label: Asset
+      description: Provide the name for each asset
+      placeholder: Icon `pencil` or Illustration `rocket`
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Provide a list of scope items
+      placeholder: The steps required to place the moon on a stick
+    validations:
+      required: true
