@@ -367,18 +367,26 @@ body:
   # >+ "keep": keep the final linebreak, keep trailing blank lines.
   # >- "strip": remove the final linebreak, remove trailing blank lines.
 
-  foo: >
-    Clip example.
-    Keep the final linebreak.
-    Remove trailing blank lines.
-  bar: >+
-    Keep example.
-    Keep the final linebreak.
-    Keep trailing blank lines.
-  baz: >-
-    Strip example.
-    Remove the final linebreak.
-    Remove trailing blank lines.
+  # BLOCK-CHOMPING INDICATORS WITH > (AUTOMATIC WRAPPING):
+  - type: markdown
+    id: block_chomping_greater_than_examples
+    attributes:
+      value: |
+        ## Block-chomping indicators with > (automatic wrapping):
+        ```yaml
+        foo: >
+          Clip example.
+          Keep the final linebreak.
+          Remove trailing blank lines.
+        bar: >+
+          Keep example.
+          Keep the final linebreak.
+          Keep trailing blank lines.
+        baz: >-
+          Strip example.
+          Remove the final linebreak.
+          Remove trailing blank lines.
+        ```
 
   # The | indicator respects the placement of the text as is.
   #
@@ -390,18 +398,26 @@ body:
   # a word or between words or simply at a specific point by putting ...
   # and YAML will replace those three dots with a newline.
 
-  foo: |
-    Clip example.
-    Keep the final linebreak.
-    Remove trailing blank lines.
-  bar: |+
-    Keep example.
-    Keep the final linebreak.
-    Keep trailing blank lines.
-  baz: |-
-    Strip example.
-    Remove the final linebreak.
-    Remove trailing blank lines.
+  # BLOCK-CHOMPING INDICATORS WITH | (LITERAL STYLE):
+  - type: markdown
+    id: block_chomping_pipe_examples
+    attributes:
+      value: |
+        ## Block-chomping indicators with | (literal style):
+        ```yaml
+        foo: |
+          Clip example.
+          Keep the final linebreak.
+          Remove trailing blank lines.
+        bar: |+
+          Keep example.
+          Keep the final linebreak.
+          Keep trailing blank lines.
+        baz: |-
+          Strip example.
+          Remove the final linebreak.
+          Remove trailing blank lines.
+        ```
 
 
   # TEXTAREA WITH A MULTI-LINE VALUE THAT CONTAINS A LINEBREAK:
