@@ -28,7 +28,7 @@ description: Describe the intended use for this template
 # will be empty and will need to be filled in by the user. If you
 # populate it with a string value, it will contain that value with a
 # blinking cursor indicating to the user that he or she can change it.
-title: [foo]
+title: "[foo] "
 # The labels are an array or comma-delimited string of labels that will
 # automatically be assigned to this issue:
 labels: ["triage"]
