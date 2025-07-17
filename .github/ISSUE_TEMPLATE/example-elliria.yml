@@ -16,10 +16,10 @@
 # Required top-level fields                                            #
 ########################################################################
 # The name is a string that's unique across all templates:
-name: Foo
+name: Example Elliria
 # The description is a string that is no more than 200 characters long
 # that describes the intended use for this template:
-description: Bar
+description: Describe the intended use for this template
 ########################################################################
 # Optional top-level fields                                            #
 ########################################################################
@@ -28,7 +28,7 @@ description: Bar
 # will be empty and will need to be filled in by the user. If you
 # populate it with a string value, it will contain that value with a
 # blinking cursor indicating to the user that he or she can change it.
-title: Baz
+title: [foo]
 # The labels are an array or comma-delimited string of labels that will
 # automatically be assigned to this issue:
 labels: ["triage"]
