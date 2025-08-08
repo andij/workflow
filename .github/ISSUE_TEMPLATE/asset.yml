@@ -18,9 +18,9 @@ body:
       placeholder: e.g. https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
 
   - type: checkboxes
-    id: scope
+    id: design
     attributes:
-      label: Scope
+      label: Design and community
       options:
         - label: This asset is unique and has a clear purpose
         - label: Completed user recognition testing
@@ -31,7 +31,7 @@ body:
         - label: Create a Figma branch for the asset in the UI Kit
         - label: Submit this Figma branch for review
 
-  - type: textarea
+  - type: input
     id: name
     attributes:
       label: Suggest a name
@@ -39,9 +39,9 @@ body:
       placeholder: e.g. 'pencil'
 
   - type: checkboxes
-    id: tasks
+    id: integration
     attributes:
-      label: Tasks
+      label: Integration
       options:
         - label: Export the SVG from Figma to exacting standards
         - label: Create a feature branch
