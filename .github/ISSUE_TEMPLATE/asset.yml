@@ -13,6 +13,8 @@ body:
     id: proposal
     attributes:
       label: Link to proposal comment
+      description: |
+        Please provide a link to the comment in the Proposal where the asset was discussed and agreed upon.
       placeholder: https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
 
   - type: checkboxes
