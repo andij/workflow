@@ -15,24 +15,30 @@ body:
       label: Scope
       description: Checklist
       options:
-        - label: This asset is unique and has a clear purpose.
-        - label: Completed user recognition testing.
-        - label: Community is in agreement with this addition.
-        - label: Confirm this asset aligns with Brand expectations.
-        - label: Asset aligns to the grid in the Figma UI Kit.
+        - label: This asset is unique and has a clear purpose
+        - label: Completed user recognition testing
+        - label: Community is in agreement with this addition
+        - label: Confirm this asset aligns with Brand expectations
+        - label: Asset aligns to the grid in the Figma UI Kit
         - label: Acceptable quality of vector. (Minimal anchor points, no masks, no strokes, 2px minimum width, combined and flattened.)
-        - label: Create SVG to exacting standard.
-        - label: Submit a feature branch.
-        - label: Raise a pull request from the feature branch.
-        - label: Seek approval for the pull request.
-        - label: Create a Figma branch for the asset in the UI Kit.
-        - label: Submit this Figma branch for review.
-        - label: Include SVG code in `brands/british-gas/icons [or] illustrations/index.js`
-        - label: Regenerate the test snapshots.
+        - label: Create a Figma branch for the asset in the UI Kit
+        - label: Submit this Figma branch for review
 
   - type: input
     id: name
     attributes:
-      label: Name of this asset
-      description: This is a pencil ✏️ not an edit.
-      placeholder: "Suggest the name for this asset."
+      label: Suggest a name
+      description: This -> ✏️ is a pencil, not an edit
+
+  - type: checkboxes
+    id: tasks
+    attributes:
+      label: Tasks
+      description: Checklist for adding the asset
+      options:
+        - label: Export the SVG from Figma to exacting standards
+        - label: Create a feature branch
+        - label: Include SVG code in `brands/british-gas/icons [or] illustrations/index.js`
+        - label: Regenerate the test snapshots
+        - label: Raise a pull request
+        - label: Seek approval
