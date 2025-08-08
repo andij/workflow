@@ -9,11 +9,16 @@ body:
       value: |
         This template aims to be well structured outlining the workflow and process to add an asset to the nucleus-util repository. And to help ensure that all tasks and dependencies are complete in a timely and informed way.
 
+  - type: input
+    id: proposal
+    attributes:
+      label: Link to proposal comment
+      placeholder: https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
+
   - type: checkboxes
     id: scope
     attributes:
       label: Scope
-      description: Checklist
       options:
         - label: This asset is unique and has a clear purpose
         - label: Completed user recognition testing
@@ -34,7 +39,6 @@ body:
     id: tasks
     attributes:
       label: Tasks
-      description: Checklist for adding the asset
       options:
         - label: Export the SVG from Figma to exacting standards
         - label: Create a feature branch
