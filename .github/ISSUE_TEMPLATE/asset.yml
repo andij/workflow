@@ -8,6 +8,10 @@ body:
     attributes:
       value: |
         This template aims to be well structured outlining the workflow and process to add an asset to the nucleus-util repository. And to help ensure that all tasks and dependencies are complete in a timely and informed way.
+
+        ### 1. Define the Asset
+        - [ ] Decide on it's name. (This is a pencil ✏️ not an edit.)
+
   - type: textarea
     id: asset
     attributes:
