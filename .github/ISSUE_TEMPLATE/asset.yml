@@ -32,10 +32,10 @@ body:
         - label: Submit this Figma branch for review
 
   - type: textarea
-    id: textarea
+    id: name
     attributes:
-      label: My text
-      description: "Which version of the software did you use?"
+      label: Suggest a name
+      description: This -> ✏️ is a pencil, not an edit
 
   - type: checkboxes
     id: tasks
