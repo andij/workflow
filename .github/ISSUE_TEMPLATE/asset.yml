@@ -36,7 +36,7 @@ body:
     attributes:
       label: Suggest a name
       description: This -> ✏️ is a pencil, not an edit
-      placeholder: "e.g. 'pencil'"
+      placeholder: e.g. 'pencil'
 
   - type: checkboxes
     id: tasks
