@@ -14,7 +14,7 @@ body:
     attributes:
       label: Link to proposal comment
       description: |
-        Please provide a link to the comment in the Proposal where the asset was discussed and agreed upon.
+        Provide a link to the comment in the Proposal where the asset was discussed and agreed upon.
       placeholder: https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
 
   - type: checkboxes
@@ -31,11 +31,11 @@ body:
         - label: Create a Figma branch for the asset in the UI Kit
         - label: Submit this Figma branch for review
 
-  - type: input
-    id: name
+  - type: textarea
+    id: textarea
     attributes:
-      label: Suggest a name
-      description: This -> ✏️ is a pencil, not an edit
+      label: My text
+      description: "Which version of the software did you use?"
 
   - type: checkboxes
     id: tasks
