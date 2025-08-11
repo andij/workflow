@@ -8,15 +8,15 @@ body:
     attributes:
       value: |
         Naming convention for the title is: [asset] type (icon or illustration) name (e.g. 'pencil')
-        Title: [asset] icon pencil
+
+        ### Title: [asset] icon pencil
 
   - type: textarea
     id: proposal
     attributes:
       label: Description
       description: |
-        Provide a description. Please include a link to the comment in the Proposal where the asset was proposed.
-      placeholder: e.g. https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
+        Include a link to the comment in the Proposal where the asset was proposed.
 
   - type: checkboxes
     id: design
