@@ -18,9 +18,9 @@ body:
         Include a link to the comment in the Proposal where the asset was proposed.
 
   - type: checkboxes
-    id: design
+    id: prerequisites
     attributes:
-      label: Design and community
+      label: Prerequisites
       options:
         - label: This asset is unique and has a clear purpose
         - label: Completed user recognition testing
@@ -35,7 +35,7 @@ body:
     id: name
     attributes:
       label: Suggest any additional names
-      description: This → ✏️ is a pencil, not an edit
+      description: This → ✏️ is a pencil, not an edit.
       placeholder: e.g. 'pencil'
 
   - type: checkboxes
@@ -44,8 +44,17 @@ body:
       label: Integration
       options:
         - label: Export the SVG from Figma to exacting standards
-        - label: Create a feature branch
-        - label: Include SVG code in `brands/british-gas/icons [or] illustrations/index.js`
-        - label: Regenerate the test snapshots
+        - label: Create a feature branch in `centrica-engineering/nucleus-util` 
+        - label: Include SVG paths in `brands/british-gas/icons [or] illustrations/index.js`
+        - label: Regenerate test snapshots
         - label: Raise a pull request
         - label: Seek approval
+
+  - type: checkboxes
+    id: deployment
+    attributes:
+      label: Deployment
+      options:
+        - label: Test 
+        - label: Deploy
+        - label: Update the version. [Nucleus Handbook](https://github.com/centrica-engineering/nucleus-internal-handbook/blob/main/release/release-process.md#nucleus-util)
