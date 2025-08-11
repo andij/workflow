@@ -7,14 +7,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        This template aims to be well structured outlining the workflow and process to add an asset to the nucleus-util repository. And to help ensure that all tasks and dependencies are complete in a timely and informed way.
+        Naming convention for the title is: [asset] type (icon or illustration) name (e.g. 'pencil')
+        Title: [asset] icon pencil
 
-  - type: input
+  - type: textarea
     id: proposal
     attributes:
-      label: Link to proposal comment
+      label: Description
       description: |
-        Provide a link to the comment in the Proposal where the asset was discussed and agreed upon.
+        Provide a description. Please include a link to the comment in the Proposal where the asset was proposed.
       placeholder: e.g. https://github.com/ConnectedHomes/nucleus/issues/3360#issuecomment-2834970646
 
   - type: checkboxes
@@ -31,11 +32,11 @@ body:
         - label: Create a Figma branch for the asset in the UI Kit
         - label: Submit this Figma branch for review
 
-  - type: input
+  - type: textarea
     id: name
     attributes:
-      label: Suggest a name
-      description: This -> ✏️ is a pencil, not an edit
+      label: Suggest any additional names
+      description: This → ✏️ is a pencil, not an edit
       placeholder: e.g. 'pencil'
 
   - type: checkboxes
