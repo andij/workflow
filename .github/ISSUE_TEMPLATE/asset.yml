@@ -34,9 +34,9 @@ body:
   - type: textarea
     id: name
     attributes:
-      label: Suggest any additional names
+      label: Suggest any alternative names
       description: This → ✏️ is a pencil, not an edit.
-      placeholder: e.g. 'pencil'
+      placeholder: e.g. 'pencil', 'pen', 'crayon'
 
   - type: checkboxes
     id: integration
@@ -45,7 +45,7 @@ body:
       options:
         - label: Export the SVG from Figma to exacting standards
         - label: Create a feature branch in `centrica-engineering/nucleus-util` 
-        - label: Include SVG paths in `brands/british-gas/icons [or] illustrations/index.js`
+        - label: Include SVG paths in `brands/british-gas/icons` [or] `illustrations/index.js`
         - label: Regenerate test snapshots
         - label: Raise a pull request
         - label: Seek approval
@@ -56,5 +56,4 @@ body:
       label: Deployment
       options:
         - label: Test 
-        - label: Deploy
-        - label: Update the version. [Nucleus Handbook](https://github.com/centrica-engineering/nucleus-internal-handbook/blob/main/release/release-process.md#nucleus-util)
+        - label: Release and update version. Refer to the [Release process](https://github.com/centrica-engineering/nucleus-internal-handbook/blob/main/release/release-process.md#nucleus-util)
