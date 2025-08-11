@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Naming convention for the title is: `[asset]` type (`icon` or `illustration`) name (e.g. 'pencil')
+        Naming convention for the title is: `[asset]` `type` (icon or illustration) `name` (e.g. 'pencil')
         Example: `[asset] icon pencil`
 
   - type: textarea
